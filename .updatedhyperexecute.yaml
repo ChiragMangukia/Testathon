@@ -1,0 +1,182 @@
+accessibilityJob: false
+alwaysRunPostSteps: false
+appium: null
+autosplit: true
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+captureScreenRecordingForScenarios: false
+codeDirectory: Testathon
+collectLocalGitData: true
+combineTasksInMatrixMode: false
+concurrency: 2
+cypress: false
+differentialUpload:
+    enabled: false
+    forcedDisabled: false
+    ttlHours: null
+dynamicAllocation: false
+errorCategorizedOnFailureOnly: false
+framework:
+    additional_args: null
+    args:
+        appId: ""
+        appPath: ""
+        artifacts: false
+        avoidAppLaunch: false
+        customData: {}
+        deviceSelectionStrategy: ""
+        devices: []
+        disableReleaseDevice: false
+        filters:
+            attributes: []
+        fixedIP: ""
+        isRealMobile: null
+        isVirtualDevice: false
+        language: ""
+        locale: ""
+        minorOsVersion: false
+        mitmProxy: false
+        mobileDC: null
+        networkHar: false
+        otherApps: []
+        platformName: ""
+        playwrightRD: false
+        preservedDevice: false
+        queueTimeout: 0
+        resignApp: true
+        shards:
+            mappings: []
+        skipInstall: false
+        skipUninstallPreviousBuild: false
+        skipXMLOnRun: false
+        smartUI: null
+        testSuiteAppId: ""
+        testSuitePath: ""
+        uninstallPreviousBuild: false
+        xcTestPlanId: ""
+        xcTestPlanPath: ""
+    baseCommand: ""
+    defaultReports: false
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    downloadURL: ""
+    flags: []
+    isTestNGXMLSuite: false
+    licenseKey: ""
+    name: ""
+    runnerFlags: []
+    toscaArgs: null
+    userdefinediscovery: false
+    version: ""
+    workingDirectory: ""
+globalPost:
+    commands: []
+    completed: false
+    mode: ""
+    runson: ""
+    shell: ""
+    workingDirectory: ""
+globalPre:
+    cache: false
+    commands: []
+    completed: false
+    location: ""
+    maxRetries: 0
+    mode: ""
+    runson: ""
+    shell: ""
+    type: ""
+    workingDirectory: ""
+    yamlPath: null
+jobID: 47d9cc25-c604-4a27-9430-02cc16ac31ac
+jobLabel:
+    - selenium-testng
+    - v1
+    - autosplit
+key: LT_RSyla46oQr7ppkGwp6vrRWjpZeYzMF66yUGItURe4swDliC
+linuxParallelism: 1
+linuxTestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
+localHTTPProxy: ""
+macParallelism: 1
+macTestRunnerCommand: mvn test `-Dplatname=mac dependency:resolve `-DselectedTests=$test
+matrix:
+    os:
+        - win
+        - mac
+        - linux
+    version:
+        - latest
+maxRetries: 2
+maxRetriesPreSteps: 0
+meta: {}
+parallelism: 1
+platformConfig: null
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+pre:
+    - mvn dependency:resolve
+preDirectives:
+    commands:
+        - mvn dependency:resolve
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: ""
+    name: ""
+    type: custom
+projectpath: ""
+regionConfig:
+    storage:
+        enabled: false
+        name: ""
+        platform: azure
+        region: ""
+    vm: []
+report: true
+retryOnFailure: true
+runson: ${matrix.os}
+runtime:
+    language: java
+    version: "17"
+    addons: []
+    opts: {}
+slackChannel: ""
+sourcePayload:
+    verifySSL: true
+storageType: ""
+testDiscovery:
+    autosubset: true
+    command: |
+        grep 'test name' src/test/testrunners/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+    linuxCommand: |
+        grep 'test name' src/test/testrunners/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+    macCommand: |
+        grep 'test name' src/test/testrunners/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+    mode: dynamic
+    type: raw
+    winCommand: |
+        grep 'test name' src/test/testrunners/testng_win11.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+testDiscoveryResultV3: []
+testSuites: []
+triggerMode: false
+tunnelOpts:
+    testsPerTunnel: 10
+unzipPayload: false
+uploadArtefacts:
+    - email:
+        linkValidity: 0
+        metaInfo: []
+        to: []
+      name: Artefacts
+      path:
+        - Reports/
+user: chirag.mangukiya
+version: "0.1"
+waitForArtefactsUpload: false
+whiteLabelProductTag: ""
+winParallelism: 1
+winTestRunnerCommand: mvn test `-Dplatname=win11 `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test

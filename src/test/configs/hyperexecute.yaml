@@ -1,0 +1,54 @@
+version: 0.1
+parallelism: 1
+
+secrets:
+  vault:
+    - email
+    - passsword
+
+autosplit: true
+concurrency: 2
+
+matrix:
+  os: ["win", "mac", "linux"]
+  version: ["latest"]
+
+runson: ${matrix.os}
+
+runtime:
+  language: java
+  version: 17
+
+pre:
+  - mvn dependency:resolve
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: |
+    grep 'test name' src/test/testrunners/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  macCommand: |
+    grep 'test name' src/test/testrunners/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  winCommand: |
+    grep 'test name' src/test/testrunners/testng_win11.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  linuxCommand: |
+    grep 'test name' src/test/testrunners/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+
+linuxTestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
+winTestRunnerCommand: mvn test `-Dplatname=win11 `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+macTestRunnerCommand: mvn test `-Dplatname=mac dependency:resolve `-DselectedTests=$test
+
+retryOnFailure: true
+maxRetries: 2
+
+failFast:
+  maxNoOfTests: 2
+
+report: true
+
+uploadArtefacts:
+  - name: Artefacts
+    path:
+      - Reports/
+
+jobLabel: [selenium-testng, v1, autosplit]
