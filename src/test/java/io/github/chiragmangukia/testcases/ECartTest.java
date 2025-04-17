@@ -11,14 +11,18 @@ public class ECartTest extends BaseTest {
 
     @Test
     public void addToCartAndVerify() {
+
+        final String EMAIL = System.getenv("email");
+        final String PASSWORD = System.getenv("passsword");
+
         driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
 
         WebElement txtEmail = driver.findElement(By.xpath("//input[@id='input-email']"));
         WebElement txtPassword = driver.findElement(By.xpath("//input[@id='input-password']"));
         WebElement btnDoLogin = driver.findElement(By.xpath("//input[@value='Login']"));
 
-        txtEmail.sendKeys("chirag@qtlt.com");
-        txtPassword.sendKeys("HelloWorld@123");
+        txtEmail.sendKeys(EMAIL);
+        txtPassword.sendKeys(PASSWORD);
         btnDoLogin.click();
 
         WebElement weHomePage = driver.findElement(By.xpath("//span[normalize-space()='Home']"));
@@ -28,6 +32,11 @@ public class ECartTest extends BaseTest {
         weShopByCategory.click();
 
         WebElement weCategory = driver.findElement(By.xpath("//span[normalize-space()='Laptops & Notebooks']"));
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         weCategory.click();
 
         WebElement weProductFilter = driver.findElement(By.xpath("//*[@id='mz-filter-panel-0-1']/div/div[1]"));

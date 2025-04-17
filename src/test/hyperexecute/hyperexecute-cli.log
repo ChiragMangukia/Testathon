@@ -1,0 +1,2 @@
+{"level":"error","time":"2025-04-17T23:02:05.248+0530","caller":"globalconfigvalidator/setup.go:54","msg":"2025-04-17T23:02:05+05:30    error    \u001b[91mERR::NO::USER\u001b[0m     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable"}
+{"level":"error","time":"2025-04-17T23:02:05.251+0530","caller":"cmd/bin.go:119","msg":"2025-04-17T23:02:05+05:30    error    \u001b[91mERR::NO::USER\u001b[0m     Unable to find LT username."}

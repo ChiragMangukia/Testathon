@@ -1,0 +1,237 @@
+{
+    "id": "47d9cc25-c604-4a27-9430-02cc16ac31ac",
+    "created_at": "2025-04-17T23:38:27Z",
+    "update_at": "2025-04-17T23:42:26Z",
+    "global_timeout": 90,
+    "tunnel_name": "",
+    "start_time": "2025-04-17T23:39:06Z",
+    "end_time": "2025-04-17T23:42:26Z",
+    "summary": {
+        "total_time": 200000000000,
+        "execution_time": 200000000000,
+        "total_tasks": 3,
+        "build_time_consumed": 197000000000,
+        "jobTestExecutionTime": "6s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 3
+            },
+            "scenario": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 6
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 3
+            }
+        },
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=47d9cc25-c604-4a27-9430-02cc16ac31ac"
+    },
+    "tasks": [
+        {
+            "id": "93276521-7e99-49a7-ad36-1fe0153ad4b7",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-04-17T23:39:06Z",
+            "update_at": "2025-04-17T23:40:48Z",
+            "start_time": "2025-04-17T23:39:06Z",
+            "end_time": "2025-04-17T23:40:48Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "48fe1d93-9097-4459-9b39-a134eec09c94",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-04-17T23:39:29Z",
+                    "started_at": "2025-04-17T23:39:29Z",
+                    "updated_at": "2025-04-17T23:39:46Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "1bb4e035-2ef2-466d-abc1-6f6b87775340",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-04-17T23:39:46Z",
+                    "started_at": "2025-04-17T23:39:46Z",
+                    "updated_at": "2025-04-17T23:39:47Z",
+                    "order": 3,
+                    "task_number": 1
+                },
+                {
+                    "id": "a0be2cc9-a98b-47c0-b3e4-b84196b76bd2",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"ChromeTest\"",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-04-17T23:39:47Z",
+                    "started_at": "2025-04-17T23:39:49Z",
+                    "updated_at": "2025-04-17T23:40:33Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "903b887d-227f-4711-ab4a-fb954c646733",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"FirefoxTest\"",
+                    "iteration": 0,
+                    "link": "command.2.0.log",
+                    "created_at": "2025-04-17T23:39:47Z",
+                    "started_at": "2025-04-17T23:40:33Z",
+                    "updated_at": "2025-04-17T23:40:45Z",
+                    "order": 5,
+                    "task_number": 1
+                }
+            ]
+        },
+        {
+            "id": "d668cf2a-88d4-47a2-90b2-106fa91257ef",
+            "os": "mac",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-04-17T23:39:06Z",
+            "update_at": "2025-04-17T23:41:37Z",
+            "start_time": "2025-04-17T23:40:50Z",
+            "end_time": "2025-04-17T23:41:37Z",
+            "group_number": 2,
+            "stages": [
+                {
+                    "id": "76044495-273a-4979-a0f4-0d3d5aab88ee",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-04-17T23:40:57Z",
+                    "started_at": "2025-04-17T23:40:57Z",
+                    "updated_at": "2025-04-17T23:41:01Z",
+                    "order": 2,
+                    "task_number": 2
+                },
+                {
+                    "id": "1dae0dde-9e54-4c55-935d-9767b68f8284",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-04-17T23:41:01Z",
+                    "started_at": "2025-04-17T23:41:01Z",
+                    "updated_at": "2025-04-17T23:41:01Z",
+                    "order": 3,
+                    "task_number": 2
+                },
+                {
+                    "id": "1921af2a-82ce-4e39-a4d0-e1929e50e028",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"ChromeTest\"",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-04-17T23:41:01Z",
+                    "started_at": "2025-04-17T23:41:05Z",
+                    "updated_at": "2025-04-17T23:41:24Z",
+                    "order": 4,
+                    "task_number": 2
+                },
+                {
+                    "id": "95105a5d-79e5-439b-9135-ded54a52544f",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"FirefoxTest\"",
+                    "iteration": 0,
+                    "link": "command.2.0.log",
+                    "created_at": "2025-04-17T23:41:01Z",
+                    "started_at": "2025-04-17T23:41:24Z",
+                    "updated_at": "2025-04-17T23:41:32Z",
+                    "order": 5,
+                    "task_number": 2
+                }
+            ]
+        },
+        {
+            "id": "70f64ca9-6f8d-41b4-a49f-c2ff5afa8b15",
+            "os": "linux",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-04-17T23:39:06Z",
+            "update_at": "2025-04-17T23:42:26Z",
+            "start_time": "2025-04-17T23:41:38Z",
+            "end_time": "2025-04-17T23:42:26Z",
+            "group_number": 3,
+            "stages": [
+                {
+                    "id": "e49716e9-6a85-41cc-b11f-f9847dba147c",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-04-17T23:41:45Z",
+                    "started_at": "2025-04-17T23:41:45Z",
+                    "updated_at": "2025-04-17T23:41:52Z",
+                    "order": 2,
+                    "task_number": 3
+                },
+                {
+                    "id": "491b63df-5d44-41db-b17b-17e5cbd7e6ef",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-04-17T23:41:52Z",
+                    "started_at": "2025-04-17T23:41:52Z",
+                    "updated_at": "2025-04-17T23:41:52Z",
+                    "order": 3,
+                    "task_number": 3
+                },
+                {
+                    "id": "2c95d69a-4971-4705-ad60-076b6afe032e",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"ChromeTest\"",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-04-17T23:41:53Z",
+                    "started_at": "2025-04-17T23:41:54Z",
+                    "updated_at": "2025-04-17T23:42:16Z",
+                    "order": 4,
+                    "task_number": 3
+                },
+                {
+                    "id": "86c009fe-50b4-456a-9224-b6893899ec2d",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "\"FirefoxTest\"",
+                    "iteration": 0,
+                    "link": "command.2.0.log",
+                    "created_at": "2025-04-17T23:41:53Z",
+                    "started_at": "2025-04-17T23:42:16Z",
+                    "updated_at": "2025-04-17T23:42:23Z",
+                    "order": 5,
+                    "task_number": 3
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}
